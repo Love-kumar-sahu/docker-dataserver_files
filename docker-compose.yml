@@ -1,0 +1,20 @@
+version: "3"
+services:
+        dbos:
+                image: mysql:5.7
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: root
+                        MYSQL_USER: lucky
+                        MYSQL_PASSWORD: lucky
+                        MYSQL_DATABASE: mydb
+
+        cloud:
+                image: owncloud:10
+                restart: always
+                depends_on:
+                        - dbos
+                ports:
+                        - 8080:80
+                volumes:
+                        - /root/lucky/config/:/var/www/html/
