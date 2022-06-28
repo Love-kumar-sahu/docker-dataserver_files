@@ -10,5 +10,6 @@ this docker container is based on owncloud image.
 
 note:- make sure you have docker and docker-compose in install. 
 firewalld is running. when you lunch docker-compose up and then stop the firewalld.
+the update.
   
   IF you are host OS is in virtual box then check OS ip. in the plase of 172.18.0.3 -> "IP of OS":8080.
